@@ -31,11 +31,6 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFblMal3p6l4R+o/sRjWrh/NyuZeVYk21sn8uqodY0t tehnarenok@tehnarenoks-MacBook-Pro.local"
   ];
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 22 443 ];
-  };
-
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
 
   sops.secrets.xray = {

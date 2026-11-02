@@ -7,14 +7,16 @@
 
   services.openssh = {
     enable = true;
+
     settings = {
       PermitRootLogin = "prohibit-password";
       PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
     };
   };
 
   users.users.root.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 YOUR_PUBLIC_SSH_KEY"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFblMal3p6l4R+o/sRjWrh/NyuZeVYk21sn8uqodY0t tehnarenok@tehnarenoks-MacBook-Pro.local"
   ];
 
   networking.firewall = {
